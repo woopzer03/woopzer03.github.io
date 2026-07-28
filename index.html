@@ -1,0 +1,328 @@
+<title>Adrian Villena — Local SEO & Websites | Northern Virginia (EN/ES)</title>
+<style>
+  :root {
+    --paper: #FAF8F3;
+    --card: #FFFFFF;
+    --ink: #1A1916;
+    --muted: #6E6A61;
+    --line: #E7E1D6;
+    --accent: #0F7A55;
+    --accent-ink: #FFFFFF;
+    --accent-soft: #E6F1EB;
+    --glow: rgba(15, 122, 85, 0.10);
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", "Cascadia Code", Menlo, Consolas, monospace;
+    --maxw: 1080px;
+    --readw: 42rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0F1211;
+      --card: #161A18;
+      --ink: #F1EEE7;
+      --muted: #9B978C;
+      --line: #262C28;
+      --accent: #38B888;
+      --accent-ink: #08110D;
+      --accent-soft: rgba(56, 184, 136, 0.14);
+      --glow: rgba(56, 184, 136, 0.14);
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #FAF8F3; --card: #FFFFFF; --ink: #1A1916; --muted: #6E6A61;
+    --line: #E7E1D6; --accent: #0F7A55; --accent-ink: #FFFFFF; --accent-soft: #E6F1EB;
+    --glow: rgba(15, 122, 85, 0.10);
+  }
+  :root[data-theme="dark"] {
+    --paper: #0F1211; --card: #161A18; --ink: #F1EEE7; --muted: #9B978C;
+    --line: #262C28; --accent: #38B888; --accent-ink: #08110D; --accent-soft: rgba(56, 184, 136, 0.14);
+    --glow: rgba(56, 184, 136, 0.14);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* ---- eyebrow / labels ---- */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* ---- top bar ---- */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--line);
+  }
+  .brand { font-weight: 800; letter-spacing: -0.01em; font-size: 1rem; }
+  .brand span { color: var(--accent); }
+  .avail {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px;
+    background: var(--card);
+  }
+  .avail::before {
+    content: ""; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+
+  /* ---- hero ---- */
+  .hero { position: relative; padding: 88px 0 64px; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(60% 55% at 82% 0%, var(--glow), transparent 70%),
+      repeating-linear-gradient(0deg, transparent, transparent 39px, var(--line) 39px, var(--line) 40px),
+      repeating-linear-gradient(90deg, transparent, transparent 39px, var(--line) 39px, var(--line) 40px);
+    opacity: 0.35;
+    mask-image: linear-gradient(180deg, #000 0%, transparent 92%);
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, transparent 92%);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+  h1 {
+    font-size: clamp(2.4rem, 6vw, 4.1rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    text-wrap: balance;
+    margin: 18px 0 0;
+    max-width: 16ch;
+  }
+  h1 .hl { color: var(--accent); }
+  .lede {
+    margin: 22px 0 0; max-width: var(--readw);
+    font-size: 1.12rem; color: var(--muted);
+  }
+  .lede strong { color: var(--ink); font-weight: 650; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 650; font-size: 0.98rem; text-decoration: none;
+    padding: 13px 20px; border-radius: 10px; border: 1px solid transparent;
+    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); }
+  .btn-primary:hover { transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  /* ---- proof strip ---- */
+  .proof {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 14px;
+    overflow: hidden; margin-top: 52px;
+  }
+  .stat { background: var(--card); padding: 24px 20px; }
+  .stat .n {
+    font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.02em;
+    color: var(--ink); line-height: 1;
+  }
+  .stat .n .accent { color: var(--accent); }
+  .stat .k {
+    margin-top: 10px; font-size: 0.82rem; color: var(--muted); line-height: 1.4;
+  }
+
+  /* ---- sections ---- */
+  section { padding: 72px 0; }
+  .sec-head { max-width: var(--readw); margin-bottom: 34px; }
+  .sec-head h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem); letter-spacing: -0.02em;
+    margin: 10px 0 0; font-weight: 800; text-wrap: balance;
+  }
+  .sec-head p { color: var(--muted); margin: 12px 0 0; }
+  .divider { border: none; border-top: 1px solid var(--line); margin: 0; }
+
+  /* ---- work cards ---- */
+  .work { display: grid; gap: 18px; }
+  .case {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 28px; display: grid; grid-template-columns: 1fr; gap: 16px;
+  }
+  @media (min-width: 720px) {
+    .case { grid-template-columns: 200px 1fr; gap: 32px; align-items: start; }
+  }
+  .case .metric {
+    font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+    font-size: 2.4rem; font-weight: 600; letter-spacing: -0.02em; color: var(--accent);
+    line-height: 1;
+  }
+  .case .metric small { display: block; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.04em; color: var(--muted); margin-top: 10px; text-transform: uppercase; }
+  .case h3 { margin: 0; font-size: 1.24rem; letter-spacing: -0.01em; }
+  .case .role { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 6px 0 0; }
+  .case p { margin: 12px 0 0; color: var(--muted); }
+  .case p .em { color: var(--ink); font-weight: 600; }
+  .stack { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+  .chip {
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.02em;
+    color: var(--ink); background: var(--accent-soft);
+    border-radius: 6px; padding: 4px 9px;
+  }
+
+  /* ---- services ---- */
+  .services { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  @media (min-width: 760px) { .services { grid-template-columns: repeat(3, 1fr); } }
+  .svc { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+  .svc .num { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); letter-spacing: 0.1em; }
+  .svc h3 { margin: 14px 0 0; font-size: 1.16rem; letter-spacing: -0.01em; }
+  .svc p { color: var(--muted); margin: 10px 0 0; font-size: 0.96rem; }
+
+  /* ---- contact ---- */
+  .contact {
+    background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+    padding: clamp(32px, 5vw, 56px); text-align: center;
+  }
+  .contact h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -0.02em; margin: 12px 0 0; text-wrap: balance; }
+  .contact p { color: var(--muted); max-width: 40ch; margin: 14px auto 0; }
+  .contact .cta-row { justify-content: center; margin-top: 28px; }
+  .links { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 26px; font-family: var(--font-mono); font-size: 0.82rem; }
+  .links a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+  .links a:hover { color: var(--accent); border-color: var(--accent); }
+
+  footer { padding: 40px 0 56px; color: var(--muted); font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.04em; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; }
+
+  /* ---- entrance animation (pure CSS — always resolves to visible, no JS needed) ---- */
+  .reveal { animation: jaf-rise 0.6s ease both; }
+  @keyframes jaf-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; }
+    .btn { transition: none; }
+  }
+</style>
+
+<header class="topbar wrap">
+  <div class="brand">Adrian <span>Villena</span></div>
+  <div class="avail">Available for new projects</div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow reveal">Local SEO &amp; Websites · Northern Virginia · English / Español</p>
+    <h1 class="reveal">I build fast websites — and get you <span class="hl">found on Google.</span></h1>
+    <p class="lede reveal">Local SEO and websites for businesses across Northern Virginia. I recently took a healthcare provider to <strong>#1 on Google for its main local search</strong> — ahead of established competitors. I handle it end to end — build the site, then get you found — in <strong>English &amp; Spanish</strong>.</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="mailto:carliadrian_92@hotmail.com?subject=Free%20Google%20Check">Get a free Google check</a>
+      <a class="btn btn-ghost" href="#work">See the work</a>
+    </div>
+
+    <div class="proof reveal" aria-label="Results at a glance">
+      <div class="stat"><div class="n"><span class="accent">#1</span></div><div class="k">Google ranking on a competitive local query</div></div>
+      <div class="stat"><div class="n">8</div><div class="k">Service-area landing pages shipped &amp; live</div></div>
+      <div class="stat"><div class="n">153</div><div class="k">Automated tests green on one release</div></div>
+      <div class="stat"><div class="n">16</div><div class="k">Point technical SEO audit → P0 fixes shipped</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Selected work</p>
+      <h2>Proof, not promises.</h2>
+      <p>A few things I've built and the outcomes they produced.</p>
+    </div>
+
+    <div class="work">
+      <article class="case reveal">
+        <div class="metric">#1<small>Local Google ranking</small></div>
+        <div>
+          <h3>Local SEO that got a provider to the top of Google</h3>
+          <p class="role">Healthcare provider · web + marketing</p>
+          <p>Delivered a <span class="em">16-finding technical SEO audit</span> and shipped the P0 fixes: sitemap/robots, valid schema (JSON-LD), and meta cleanup. Built and launched <span class="em">8 service-area landing pages</span>, diagnosed and fixed broken GA4 conversion tracking, and authored a $1K Google Ads plan. Result: <span class="em">ranked #1 for a high-intent local query</span>, ahead of established competitors.</p>
+          <div class="stack"><span class="chip">Flask</span><span class="chip">JSON-LD</span><span class="chip">GA4</span><span class="chip">Google Ads</span><span class="chip">Search Console</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="metric">153<small>Tests green</small></div>
+        <div>
+          <h3>Cross-platform healthcare app — iOS, Android &amp; web</h3>
+          <p class="role">Product engineering · full-stack</p>
+          <p>Shipped features end-to-end on a HIPAA-adjacent clinician app: a role-based patient-status system, staff scheduling, and document/image attachments — <span class="em">153 unit/widget tests green</span>, static analysis clean. Diagnosed and fixed a <span class="em">CEO-reported production crash</span> with added test coverage.</p>
+          <div class="stack"><span class="chip">Flutter/Dart</span><span class="chip">Firebase</span><span class="chip">Firestore</span><span class="chip">Cloud Functions</span><span class="chip">FCM</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="metric">0<small>False positives</small></div>
+        <div>
+          <h3>An AI automation agent that handles the busywork</h3>
+          <p class="role">Cloud automation · Python/Azure</p>
+          <p>Designed and built an agent that monitors a Microsoft 365 inbox, <span class="em">classifies real support tickets from noise with zero false positives</span>, and delivers proactive 1:1 Teams messages. Also the designated reviewer on the team's AI code-generation pipeline — catching real defects before they ship.</p>
+          <div class="stack"><span class="chip">Python 3.12</span><span class="chip">Microsoft Graph</span><span class="chip">Azure Functions</span><span class="chip">Bot Service</span><span class="chip">FastAPI</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">What I do</p>
+      <h2>How I get you more customers.</h2>
+    </div>
+    <div class="services">
+      <div class="svc reveal">
+        <div class="num">/ 01</div>
+        <h3>Local SEO that gets you found</h3>
+        <p>Show up when customers search for what you do — Google Business Profile, on-page SEO, local landing pages, and tracking that proves the results.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="num">/ 02</div>
+        <h3>Fast, modern websites</h3>
+        <p>A site that loads fast, looks great on every phone, and turns visitors into calls and customers — built and maintained.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="num">/ 03</div>
+        <h3>Apps &amp; automation</h3>
+        <p>Need more than a site? Custom web and mobile apps plus automations that handle the busywork — Flutter, Python, and AI workflows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact reveal">
+      <p class="eyebrow">Let's talk</p>
+      <h2>Let's get you found.</h2>
+      <p>Send me your business and I'll run a free Google visibility check — the top 3 things costing you customers, no obligation. <strong>English &amp; Spanish · Se habla español.</strong></p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:carliadrian_92@hotmail.com?subject=Free%20Google%20Check">Get a free Google check</a>
+      </div>
+      <div class="links">
+        <a href="mailto:carliadrian_92@hotmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/adrian-villena-728062198" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/woopzer03" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Adrian Villena — Local SEO &amp; Websites</span>
+    <span>Alexandria, VA · EN / ES</span>
+  </div>
+</footer>
+
+<!-- entrance animation is pure CSS; no JavaScript required -->
