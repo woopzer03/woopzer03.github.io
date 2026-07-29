@@ -182,6 +182,19 @@
   .svc h3 { margin: 14px 0 0; font-size: 1.16rem; letter-spacing: -0.01em; }
   .svc p { color: var(--muted); margin: 10px 0 0; font-size: 0.96rem; }
 
+  /* ---- pricing ---- */
+  .pricing { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  @media (min-width: 760px) { .pricing { grid-template-columns: repeat(3, 1fr); } }
+  .tier { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px; display: flex; flex-direction: column; }
+  .tier .tname { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+  .tier .price { font-size: 2rem; font-weight: 800; letter-spacing: -0.02em; margin: 12px 0 0; line-height: 1.05; }
+  .tier .price small { font-size: 0.9rem; font-weight: 500; color: var(--muted); }
+  .tier .price .from { display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin-bottom: 4px; }
+  .tier ul { list-style: none; padding: 0; margin: 18px 0 0; flex: 1; }
+  .tier li { color: var(--muted); font-size: 0.95rem; padding-left: 22px; position: relative; margin: 9px 0; }
+  .tier li::before { content: "\2192"; position: absolute; left: 0; color: var(--accent); }
+  .tier .turn { margin-top: 18px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; }
+
   /* ---- contact ---- */
   .contact {
     background: var(--card); border: 1px solid var(--line); border-radius: 20px;
@@ -296,6 +309,57 @@
         <h3>Apps &amp; automation</h3>
         <p>Need more than a site? Custom web and mobile apps plus automations that handle the busywork — Flutter, Python, and AI workflows.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Packages &amp; pricing</p>
+      <h2>Clear pricing. No surprises.</h2>
+      <p>Every project starts with a <strong>free Google check</strong>. The prices below are starting points — your final quote depends on your business. <strong>English &amp; Spanish.</strong></p>
+    </div>
+
+    <div class="pricing">
+      <div class="tier reveal">
+        <div class="tname">Get Found</div>
+        <div class="price"><span class="from">From</span>$500<small> one-time</small></div>
+        <ul>
+          <li>Google Business Profile optimized</li>
+          <li>On-page SEO — titles, meta &amp; local keywords</li>
+          <li>1 optimized landing page</li>
+        </ul>
+        <div class="turn">~1 week</div>
+      </div>
+
+      <div class="tier reveal">
+        <div class="tname">Rank &amp; Convert</div>
+        <div class="price"><span class="from">From</span>$1,800<small> one-time</small></div>
+        <ul>
+          <li>New or rebuilt website (up to 5 pages)</li>
+          <li>Local SEO + Google Business Profile + schema</li>
+          <li>Conversion tracking, set up right</li>
+        </ul>
+        <div class="turn">2–3 weeks</div>
+      </div>
+
+      <div class="tier reveal">
+        <div class="tname">Care Plan</div>
+        <div class="price"><span class="from">From</span>$500<small> /month</small></div>
+        <ul>
+          <li>Ongoing SEO + a new page or post each month</li>
+          <li>Google Business Profile posts + review monitoring</li>
+          <li>Monthly performance report</li>
+        </ul>
+        <div class="turn">Ongoing</div>
+      </div>
+    </div>
+
+    <div class="cta-row reveal" style="margin-top: 32px;">
+      <a class="btn btn-primary" href="https://tally.so/r/aQXEkq" target="_blank" rel="noopener">Start with a free Google check</a>
     </div>
   </div>
 </section>
