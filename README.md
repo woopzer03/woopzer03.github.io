@@ -1,6 +1,6 @@
 # woopzer03.github.io
 
-My website — **Local SEO & websites for Northern Virginia businesses**, in English & Spanish.
+My website — **Local SEO & websites for the DMV (DC, Maryland & Virginia)**, in English & Spanish.
 
 🌐 **Live:** https://woopzer03.github.io
 
